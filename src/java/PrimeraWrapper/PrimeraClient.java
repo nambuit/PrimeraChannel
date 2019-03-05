@@ -54,10 +54,6 @@ private String output;
         {
             t24 =   new T24Interface_Service().getT24InterfacePort();
             
-           
-            
-          
-            
         } catch (Exception e)
         {
            System.out.println(e.getMessage());
