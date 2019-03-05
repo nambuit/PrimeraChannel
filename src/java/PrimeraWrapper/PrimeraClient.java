@@ -91,7 +91,7 @@ private String output;
     response.setAccountNumber(t24response.getAccountNumber());
     response.setAccountOfficer(t24response.getAccountOfficer());
     response.setCurrency(t24response.getCurrency());
-    response.setCustomerName(t24response.getCurrency());
+    response.setCustomerName(t24response.getCustomerName());
     response.setInstitutionCode(t24response.getInstitutionCode());
     response.setIsSuccessful(t24response.isIsSuccessful());
     response.setOnlineActualBalance(t24response.getOnlineActualBalance());
