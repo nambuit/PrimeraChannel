@@ -27,5 +27,7 @@ public class AccountDetailsResponse {
  private Boolean IsSuccessful;
  private String Message;
  private String requestID;
-private String hash;
+ private String hash;
+ private String Responsecode;
+ private String Responsedescription;
 }
