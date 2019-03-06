@@ -44,7 +44,7 @@ public class PrimeraClient {
 private String Ofsuser;
 private String Ofspass;
 private String ImageBase;
-private String output;
+
 
     /**
      * Creates a new instance of PrimeraClient
@@ -100,7 +100,7 @@ private String output;
         String sd ="";
     }
     
-    return output;
+    return gson.toJson(response);
    }
 }
    
