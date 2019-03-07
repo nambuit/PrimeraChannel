@@ -61,9 +61,7 @@ public class AppParams {
             javax.naming.Context ctx = (javax.naming.Context) new InitialContext().lookup("java:comp/env");
             Host = (String) ctx.lookup("HOST");
             port = Integer.parseInt((String) ctx.lookup("PORT"));
-            encryptionserver = (String) ctx.lookup("encryptionHOST");
-            encryptionport = Integer.parseInt((String) ctx.lookup("encryptionPORT"));
-            encryptionkey = (String) ctx.lookup("encryptionKEY");
+            
             OFSsource = (String) ctx.lookup("OFSsource");
             Ofsuser = (String) ctx.lookup("OFSuser");
             Ofspass = (String) ctx.lookup("OFSpass");
@@ -71,12 +69,7 @@ public class AppParams {
             DBuser = (String) ctx.lookup("DBuser");
             DBpass = (String) ctx.lookup("DBpass");
             DBserver = (String) ctx.lookup("DBserver");
-            ISOofsSource = (String) ctx.lookup("ISO_OFSsource");
-            LogDir = (String) ctx.lookup("LogDir");
-            listeningDir = (String) ctx.lookup("ISOLogListenerDir");
-            T24Framework = (String) ctx.lookup("T24Framework");
-            bvnEndpoint = (String) ctx.lookup("BVNendpointUrl");
-            bvnOrgcode = (String) ctx.lookup("BVNOrgCode");
+            
                 
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
             propertiesfile = classLoader.getResourceAsStream("nip/tools/interfacelogger.properties");

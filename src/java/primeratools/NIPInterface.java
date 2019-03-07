@@ -23,7 +23,7 @@ public class NIPInterface
       
       request.setRequestID(UUID.randomUUID().toString());
       
-      RestClient client = new RestClient("http://127.0.0.1:8080/NIPClient/webresources/PrimeraInterface");  //172.16.10.5:
+      RestClient client = new RestClient("http://127.0.0.1:8080/PrimeraChannel/webresources/PrimeraInterface");  //172.16.10.5:
       
       String stringtohash = request.getRequestID() + request.getInstitutionCode(); //+ request.getAmount();
       

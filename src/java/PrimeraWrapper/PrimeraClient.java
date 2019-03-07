@@ -107,7 +107,8 @@ public class PrimeraClient {
                 detailresponse.setResponsedescription(respcodes.getMessage());
                 return gson.toJson(detailresponse);
         }
-              ResultSet rs = db.getData("select * from NIPClients where ApplicationID = '"+applicationID.trim()+"';", conn);
+            db = new DBConnector(options.getDBserver(), options.getDBuser(), options.getDBpass(), "BVNLogs");  
+            ResultSet rs = db.getData("select * from NIPClients where ApplicationID = '"+applicationID.trim()+"';", conn);
               
               if(rs.next()){
                 

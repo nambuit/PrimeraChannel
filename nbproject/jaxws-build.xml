@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/main/service"/>
         <delete dir="${build.generated.dir}/jax-wsCache/T24Interface"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-T24Interface"/>
+    <target name="wsimport-client-T24Interface_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/T24Interface_1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/T24Interface_1" destdir="${build.generated.dir}/jax-wsCache/T24Interface_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/T24Interface_1/wsdl/tm-db_8080/PrimeraGateway/T24Interface.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://tm-db:8080/PrimeraGateway/T24Interface?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/T24Interface_1/wsdl/tm-db_8080/PrimeraGateway/T24Interface.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/T24Interface_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/T24Interface_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-T24Interface_1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/main/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/T24Interface_1"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-T24Interface, wsimport-client-T24Interface_1"/>
 </project>
