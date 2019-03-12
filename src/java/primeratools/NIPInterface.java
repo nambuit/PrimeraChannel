@@ -73,7 +73,7 @@ public class NIPInterface
     
     String neresponse = new NIPInterface().AccountDetailsRequest("{\"InstitutionCode\": \"1111\",\"AccountNumber\": \"10995\"}");
     
-    //NameEnquiryResponse neresponseobj = (NameEnquiryResponse)gson.fromJson(neresponse, NameEnquiryResponse.class);
+   // NameEnquiryResponse neresponseobj = (NameEnquiryResponse)gson.fromJson(neresponse, NameEnquiryResponse.class);
     
     String sd ="";
 //    request.setNameEnquiryRef(neresponseobj.getNameEnquiryRef());
